@@ -1,38 +1,68 @@
-.App {
+h1 {
   text-align: center;
+  color: #8bbe09e5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #525252;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(233, 231, 231, 0.885);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  background-color: #88ff00bc;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #043361;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #efe9e9;
 }
 
-.App-link {
-  color: #61dafb;
+button.delete-button {
+  background-color: #ff4136;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button.delete-button:hover {
+  background-color: #d90000;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
 }
