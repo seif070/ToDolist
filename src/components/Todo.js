@@ -1,14 +1,13 @@
 import React from 'react';
 
 
-function Todo({ Todo, index, deleteTodo, toggleComplete }) {
+function Todo({ todo, index, deleteTodo, toggleComplete }) {
     return (
-      <li className={Todo.completed ? 'completed' : ''}>
-        {Todo.text}
-        <button onClick={() => deleteTodo(index)}>Supprimer</button>
+      <li className={todo.completed ? 'completed' : ''}>
+        {todo.text}
         <input
           type="checkbox"
-          checked={Todo.completed}
+          checked={todo.completed}
           onChange={() => toggleComplete(index)}
 
 

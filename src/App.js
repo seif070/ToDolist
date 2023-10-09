@@ -9,7 +9,7 @@ function App() {
 
   const handleAddTodo= () => {
     if (newTodo.trim() !== '') {
-      setTodos([...todos, { text: newTodo, completed: false }]);
+      setTodos([...todos, { text: newTodo, completed: false}]);
       setNewTodo('');
     }
   };
@@ -38,7 +38,7 @@ function App() {
         onChange={(e) => setNewTodo(e.target.value)}
       />
       <button onClick={handleAddTodo}>Ajouter</button>
-      <button onClick={handleAddTodo}>Supprimer</button>
+      <button onClick={deleteTodo}>Supprimer</button>
 
       <Todolist todos={todos} deleteTodo={deleteTodo} toggleComplete={toggleComplete} />
    
@@ -46,53 +46,14 @@ function App() {
    
    
    
-      <input
-        type="text"
-        placeholder="BMW e92 m3..."
-        value={newTodo}
-        onChange={(e) => setNewTodo(e.target.value)}
-      />
-      <button onClick={handleAddTodo}>Ajouter</button>
-      <button onClick={handleAddTodo}>Supprimer</button>
-
-      <Todolist todos={todos} deleteTodo={deleteTodo} toggleComplete={toggleComplete} />
+      
    
    
    
-      <input
-        type="text"
-        placeholder="Porsche Macan gts..."
-        value={newTodo}
-        onChange={(e) => setNewTodo(e.target.value)}
-      />
-      <button onClick={handleAddTodo}>Ajouter</button>
-      <button onClick={handleAddTodo}>Supprimer</button>
-
-      <Todolist todos={todos} deleteTodo={deleteTodo} toggleComplete={toggleComplete} />
+     
    
    
-      <input
-        type="text"
-        placeholder="Bmw e60 m5..."
-        value={newTodo}
-        onChange={(e) => setNewTodo(e.target.value)}
-      />
-      <button onClick={handleAddTodo}>Ajouter</button>
-      <button onClick={handleAddTodo}>Supprimer</button>
-
-      <Todolist todos={todos} deleteTodo={deleteTodo} toggleComplete={toggleComplete} />
-   
-   
-      <input
-        type="text"
-        placeholder="Ferrari Enzo..."
-        value={newTodo}
-        onChange={(e) => setNewTodo(e.target.value)}
-      />
-      <button onClick={handleAddTodo}>Ajouter</button>
-      <button onClick={handleAddTodo}>Supprimer</button>
-
-      <Todolist todos={todos} deleteTodo={deleteTodo} toggleComplete={toggleComplete} />
+     
     </div>
    
 
