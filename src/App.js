@@ -38,9 +38,8 @@ function App() {
         onChange={(e) => setNewTodo(e.target.value)}
       />
       <button onClick={handleAddTodo}>Ajouter</button>
-      <button onClick={deleteTodo}>Supprimer</button>
 
-      <Todolist todos={todos} deleteTodo={deleteTodo} toggleComplete={toggleComplete} />
+      <Todolist  />
    
    
    

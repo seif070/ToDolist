@@ -1,14 +1,15 @@
 import React from 'react';
-import Todo from './Todo';
+import Todo from '../components/Todo'
+import {useSelector} from 'react-redux'
 
-
-function Todolist({ todos, deleteTodo, toggleComplete }) {
+function Todolist() {
+  const Todos=useSelector(state=>state.Todo)
+  console.log('fghj',Todos)
   return (
-    <ul>
-      {todos.map((todo, index) => ( 
-        <Todo key={index} todo={todo} index={index} deleteTodo={deleteTodo} toggleComplete={toggleComplete} /> 
-      ))}
-    </ul>
+    <div>
+      {Todos.map((todo) => <Todo  todo={todo}  /> 
+      )}
+    </div>
   );
 }
 
