@@ -30,14 +30,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>ToDo List</h1>
+      <h1>App Todo with redux</h1>
       <input
         type="text"
         placeholder="Porsche carrera 911..."
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
       />
-      <button onClick={handleAddTodo}>Ajouter</button>
 
       <Todolist  />
    

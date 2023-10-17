@@ -1,16 +1,21 @@
 import React from 'react';
-import { handleDelet } from './redux/Action';
-import {useDispatch} from 'react-redux'
-function Todo({ todo}) {
-  const dispatch=useDispatch()
-    return (
-      <li >
-        {todo.discription}
-        
-      <button onClick={()=>dispatch(handleDelet(todo.id))}>Supprimer</button>
+import { handleDelet, handleAdd } from './redux/Action'; 
+import { useDispatch } from 'react-redux';
 
-      </li>
-      );
-    }
+function Todo({ todo }) {
+  const dispatch = useDispatch();
 
-    export default Todo;
+  const handleAddTodo = (todoId) => {
+    dispatch(handleAdd(todoId));
+  };
+
+  return (
+    <li>
+      {todo.discription}
+      <button onClick={() => dispatch(handleDelet(todo.id))}>Supprimer</button>
+      <button onClick={() => handleAddTodo(todo.id)}>Ajouter</button>
+    </li>
+  );
+}
+
+export default Todo;
