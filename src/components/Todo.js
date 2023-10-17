@@ -5,15 +5,12 @@ import { useDispatch } from 'react-redux';
 function Todo({ todo }) {
   const dispatch = useDispatch();
 
-  const handleAddTodo = (todoId) => {
-    dispatch(handleAdd(todoId));
-  };
+
 
   return (
     <li>
-      {todo.discription}
+      {todo.description}
       <button onClick={() => dispatch(handleDelet(todo.id))}>Supprimer</button>
-      <button onClick={() => handleAddTodo(todo.id)}>Ajouter</button>
     </li>
   );
 }

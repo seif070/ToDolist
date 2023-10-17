@@ -14,7 +14,7 @@ export const Action = createSlice({
     handleAdd: (state, action) => {
       const newItem = {
         id: state.length + 1,
-        description: action.payload.description,
+        description: action.payload,
         checked: false,
       };
       state.push(newItem);

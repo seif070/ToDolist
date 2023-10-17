@@ -1,32 +1,16 @@
 import React, { useState } from 'react';
 import Todolist from './components/Todolist';
 import './App.css';
-
+import { handleAdd } from './components/redux/Action';
+import { useDispatch } from 'react-redux';
 
 function App() {
-  const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState('');
 
-  const handleAddTodo= () => {
-    if (newTodo.trim() !== '') {
-      setTodos([...todos, { text: newTodo, completed: false}]);
-      setNewTodo('');
-    }
-  };
+
+const dispatch = useDispatch()
 
 
-
-  const deleteTodo = (index) => {
-    const updatedTodos = [...todos];
-    updatedTodos.splice(index, 1);
-    setTodos(updatedTodos);
-  };
-
-  const toggleComplete = (index) => {
-    const updatedTodos = [...todos];
-    updatedTodos[index].completed = !updatedTodos[index].completed;
-    setTodos(updatedTodos);
-  };
 
   return (
     <div className="App">
@@ -37,6 +21,7 @@ function App() {
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
       />
+      <button onClick={() =>dispatch(handleAdd(newTodo))}>Ajouter</button>
 
       <Todolist  />
    
